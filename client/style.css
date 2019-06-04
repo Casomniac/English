@@ -1,0 +1,251 @@
+body{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #3a3a3a;
+}
+a{
+  text-decoration: none;
+}
+.footer{
+  flex: 0 0 auto;
+}
+.button{
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 20px;
+  padding: 0 14px;
+  background-color: transparent;
+  outline: none;
+  color: #7e4eff;
+  border: 1px solid #7e4eff;
+  border-radius: 30px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.button::after{
+  content: '';
+  position: absolute;
+  left: -120px;
+  top: 0;
+  width: 180px;
+  height: 30px;
+  transform: rotate(-35deg);
+  background-color: rgba(168, 148, 217, 0.2);
+  transition: left 10ms ease-out;
+}
+.button:hover::after{
+  left: 120%;
+  transition: left 550ms ease-out;
+}
+.button_start{
+  height: 60px;
+  line-height: 60px;
+  padding: 0 50px;
+  font-weight: 500;
+  font-size: 20px;
+}
+.button_log-out{
+  margin: 0;
+  margin-left: 12px;
+  border-radius: 4px;
+  background: #823aa0;
+  color: #ffffff;
+}
+.button_log-out span{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  transition: .3s;
+}
+.button_log-out::before{
+  content: '\1F6AA';
+  position: absolute;
+  left: 0;
+  top: -120%;
+  height: 100%;
+  width: 100%;
+  line-height: 1.7;
+  font-size: 180%;
+  transition: .3s;
+}
+.button_log-out::after{
+  display: none;
+}
+.button_log-out:hover span{
+  transform: translateY(300%);
+}
+.button_log-out:hover::before{
+  top: 0;
+}
+.next-button{
+  height: 80px;
+  width: 70px;
+  padding: 15px;
+  position: absolute;
+  right: -80px;
+  top: -20px;
+  cursor: pointer;
+  text-align: center;
+  color: #fff;
+  border-radius: 12px;
+  border: 1px solid #aaa;
+  background-color: #c6c1c1;
+  outline: none;
+  transition: .3s;
+}
+.next-button:hover{
+  background-color: #44b3ee;
+  border-color: #1180bb;
+}
+.header_left{
+  font-family: 'Poppins', sans-serif;
+  color: #000000;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 0.4rem;
+}
+.avatar-greetings{
+  font-size: 0.8rem;
+  padding-left: 0.5rem;
+}
+.side-menu-rank{
+  font-size: 0.9rem;
+  color: #737474;
+  padding-bottom: 3rem;
+}
+.menu-item-text{
+  color: #1d1d1d;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  padding-left: 1rem;
+}
+.side-menu-fullName{
+  padding: 0.75rem 0;
+}
+.content-subheading{
+  font-size: 0.9rem;
+  color: #000000;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+.content-heading{
+  font-size: 1.25rem;
+  color: #000000;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  margin: 0;
+}
+.table-container{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.table-container .button{
+  align-self: right;
+}
+.table_words{
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+.table__row{
+  border-bottom: 1px solid #e4e4e4;
+}
+.table__header{
+  font-size: 18px;
+}
+.table__row:last-child{
+  border: none;
+}
+.table__item:first-child{
+  font-weight: 600;
+  width: 40% ;
+}
+.table__header,
+.table__item{
+  text-align: left;
+  padding: 10px 15px;
+}
+.game-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 34px;
+}
+.game-top{
+  position: relative;
+}
+.game__learn-word{
+  font-size: 28px;
+  color: #3E3E3E;
+}
+.game__hint{
+  font-size: 17.6px;
+  color: #aaa;
+}
+.words{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  max-width: 560px;
+  justify-content: space-between;
+  padding-top: 24px;
+}
+.words_end{
+  pointer-events: none;
+}
+.words .word{
+  display: table;
+  position: relative;
+  max-width: 240px;
+  width: 200px;
+  cursor: pointer;
+  font-size: 30px;
+  padding: 8px 17px 8px 43px;
+  margin-bottom: 8px;
+  background-color: #ffffff;
+  border: 1px solid #E6E6E6;
+  border-radius: 12px;
+  transition: .3s ease-in-out;
+}
+.words .word:hover{
+  background-color: rgba(126, 78, 255, .7);
+}
+.words .word:hover .word__val{
+  color: #ffffff;
+}
+.words .word_wrong,
+.words .word_wrong:hover{
+  border-color: #dd2231;
+  background-color: #e44e5a;
+  color: #ffffff;
+}
+.words .word_right,
+.words .word_right:hover{
+  border-color: #71a137;
+  background-color: #8bc14a;
+  color: #ffffff;
+}
+.word__index{
+  position: absolute;
+  left: 18px;
+  color: #000000;
+  opacity: 0.3;
+}
+.word__val{
+  display: block;
+  padding-left: 8px;
+  text-transform: capitalize;
+}
+@media screen and (max-width: 992px){
+  .words{
+    justify-content: center;
+  }
+  .words .word{
+    width: 100%;
+    max-width: 340px;
+  }
+}
